@@ -2,7 +2,7 @@ const core = require('@actions/core');
 const github = require('@actions/github');
 const axios = require('axios');
 
-const READY_STATES = ['ready', 'current'];
+const READY_STATES = ['ready', 'current', 'error'];
 
 function getNetlifyUrl(url) {
   return axios.get(url, {
