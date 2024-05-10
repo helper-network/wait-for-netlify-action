@@ -39,7 +39,7 @@ const waitForDeployCreation = (url, commitSha, MAX_TIMEOUT, context) => {
         return resolve(commitDeployment);
       }
 
-      console.log(`Not yet created, waiting ${increment} more seconds...`);
+      console.log(`Not yet created, currently  waiting ${increment} more seconds...`);
     }, increment * 1000);
   });
 };
@@ -70,7 +70,7 @@ const waitForReadiness = (url, MAX_TIMEOUT) => {
         return resolve();
       }
 
-      console.log(`Not yet ready, waiting ${increment} more seconds...`);
+      console.log(`Not yet ready, state currently ${state}, waiting ${increment} more seconds...`);
     }, increment * 1000);
   });
 };
