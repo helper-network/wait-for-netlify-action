@@ -134,9 +134,6 @@ const run = async () => {
       `https://api.netlify.com/api/v1/sites/${siteId}/deploys/${commitDeployment.id}`,
       MAX_WAIT_TIMEOUT
     );
-
-    console.log(`Waiting for a 200 from: ${url}`);
-    await waitForUrl(url, MAX_READY_TIMEOUT);
   } catch (error) {
     core.setFailed(typeof error === 'string' ? error : error.message);
   }
